@@ -27,20 +27,39 @@ header.header
     .header__lineTwo
         div.lineTwo
             div.lineTwo__logo
-                a(href='#' alt='logo').lineTwo__link
-                    img(src='images/logo.svg')
+                a(href='#').lineTwo__link
+                    img(src='images/logo.svg', alt='logo')
             div.lineTwo__phone
-                p.lineTwo__number (8184)52-96-33
+                p.lineTwo__number (8184) 52-96-33
             div.lineTwo__search
                 form(action='#').form-search
                     input(type='text', placeholder='Искать' name='search').form-search__text
                     button(type='submit').form-search__searchBtn
             div.lineTwo__person
                 div.lineTwo__sign-in
-                    a(href='#')
-                        | Вход/Регистрация
+                    a(href='#').lineTwo__persLink.lineTwo__persLink_defColor
                         span.lineTwo__imgPers
+                        | Вход/Регистрация
                 div.lineTwo__basket
-                    a(href='#')
-                        | Корзина
+                    a(href='#').lineTwo__persLink.lineTwo__persLink_defColor
                         span.lineTwo__imgBasket
+                        | Корзина
+                        span.counter
+    .header__menu
+        ul.menu
+            li.menu__item
+                a(href="#").menu__link  каталог
+            li.menu__item
+                a(href="#").menu__link  о компании
+            li.menu__item
+                a(href="#").menu__link  ОМС
+            li.menu__item
+                a(href="#").menu__link  акции
+            li.menu__item
+                a(href="#").menu__link  розничная сеть
+            li.menu__item
+                a(href="#").menu__link  партнеры
+            li.menu__item
+                a(href="#").menu__link  контакты
+            li.menu__item
+                a(href="#").menu__link  подбор очков

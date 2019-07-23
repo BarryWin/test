@@ -1,0 +1,122 @@
+.header{ 
+    width: $container;
+    margin: auto;
+    padding-top: 20px;
+    justify-content: space-between;
+}
+.header__lineOne{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.line{
+    display: flex;    
+    align-items: center;
+    &_smFSize{
+        font-size: 12px;
+    }
+    &__seperator{
+        display: inline-block;
+        vertical-align: middle;
+        height: 18px;
+        width: 1px;
+        background-color: $grayColor;
+        margin-left: 31px;
+        margin-right: 31px;
+    }
+    &__link{
+        &_inst{
+            display: inline-block;
+            background-image: url('../images/icon_instagram.svg');
+            width: 14px;
+            height: 14px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin: 0 6px;
+        }
+        &_twit{
+            display: inline-block;
+            background-image: url('../images/icon_twitter.svg');
+            width: 14px;
+            height: 14px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin: 0 6px;
+        }
+        &_vk{
+            display: inline-block;
+            background-image: url('../images/icon_vk.svg');
+            width: 16px;
+            height: 14px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin: 0 6px;
+        }
+    }
+    &__link_colorGray{
+        color: $grayColor;
+        &:hover{
+            color: $lightHoverColor;
+        }
+    }    
+    &__imgGlasses{
+        display: inline-block;
+        margin-right: 10px;
+        background-image: url('../images/headerGlasses.svg');
+        width: 16px;
+        height: 12px;
+        background-position: center;
+        background-repeat: no-repeat;
+    } 
+    &__imgBars{ 
+        display: inline-block;
+        margin-right: 10px;
+        background-image: url('../images/bars.svg');
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 12px;
+        background-position: center;
+    }
+    &__link_instagram{
+        background-image: url('../images/icon_instagram.svg');
+    }
+
+}
+.header__lineTwo{
+    margin-top: 59px;
+} 
+.lineTwo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__number{
+        font-size: 24px; 
+    }
+    &__person{
+        display: flex;
+    }
+    &__sign-in{
+        margin-right: 40px;
+    }
+}
+.form-search{
+    display: flex;
+    align-items: center;
+    width: 292px;
+    &__text{
+        width: 274px;
+        height: 26px;
+    }
+    &__searchBtn{
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-image: url('..images/search.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

@@ -6,6 +6,8 @@ const cleanCSS = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const browserSync = require('browser-sync');
+const named = require('vinyl-named');
+const webpack = require('webpack-stream');
 
 gulp.task('build-html', done => {
     gulp.src("./src/templates/**/*.pug")
@@ -43,6 +45,15 @@ gulp.task('build-images', done => {
     done();
 });
 
+gulp.task('build-js', done => {
+    gulp.src('./src/js/**/*.{js,json}')
+        .pipe(named())
+        .pipe(webpack(require('./webpack.config')))
+        .pipe(gulp.dest('./public/js'))
+    done();
+});
+
+
 gulp.task('watch', function () {
     gulp.watch('./src/scss/**/*.scss', gulp.series('build-css'));
     gulp.watch('./src/templates/**/*.pug').on('change', gulp.series('build-html'));
@@ -59,7 +70,6 @@ browserSync.init({
 });
 
 
-
 // gulp.watch('./src/templates/**/*.pug', gulp.parallel('build-html'));    
 // gulp.watch('./src/js/**/*.js', gulp.parallel('build-js'));    
 // gulp.watch('./src/vuex/*', gulp.parallel('build-js'));    
@@ -73,7 +83,8 @@ gulp.task('default',
     gulp.parallel(
         'build-html',
         'build-css',
-        'build-images'
+        'build-images',
+        'build-js',
     )
 );
 

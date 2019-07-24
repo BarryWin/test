@@ -14,7 +14,7 @@ gulp.task('build-html', done => {
         .pipe(pug())
         .pipe(beautifier())
         .pipe(gulp.dest('./public'))
-        .pipe(browserSync.reload({stream: true}));
+        .pipe(browserSync.reload({stream: true}))
     done();
 });
 
@@ -23,7 +23,7 @@ gulp.task('build-css', done => {
         .pipe(sass().on('error', sass.logError))
         .pipe(cleanCSS())
         .pipe(gulp.dest('./public/css'))
-        .pipe(browserSync.reload({stream: true}));
+        .pipe(browserSync.reload({stream: true}))
     done();
 });
 

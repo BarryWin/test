@@ -5,7 +5,9 @@ html
         link(rel='stylesheet', href='css/main.css')
         link(rel='stylesheet', href='images/icomoon/ic-test.css')
     body
-        include  components/header.pug
-        main.main
-            .main__wrapper Hello, my frie
+        include components/header.pug
+        include components/main.pug
         include components/footer.pug        
+
+        script(src="./js/common.js")
+        script(src="./js/swiper.js")

@@ -29,6 +29,10 @@
         background-color: $grayColor;
         margin-left: 31px;
         margin-right: 31px;
+        @media only screen and (max-width : 1140px){
+            margin-left: 15px;
+            margin-right: 15px;
+        }
     }
     &__link{
         &_inst{

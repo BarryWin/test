@@ -26,9 +26,10 @@ header.header
                     a(href='#').line__link_colorGray Возврат и обмен
     .header__lineTwo
         div.lineTwo
+            div.lineTwo__burger
             div.lineTwo__logo
                 a(href='#').lineTwo__link
-                    img(src='images/logo.svg', alt='logo')
+                    img(src='images/logo.svg', alt='logo').lineTwo__logoImg
             div.lineTwo__phone
                 p.lineTwo__number (8184) 52-96-33
             div.lineTwo__search
@@ -39,14 +40,14 @@ header.header
                 div.lineTwo__sign-in
                     a(href='#').lineTwo__persLink.lineTwo__persLink_defColor
                         span.lineTwo__imgPers
-                        | Вход/Регистрация
+                        span.lineTwo__textSignIn Вход/Регистрация
                 div.lineTwo__basket
                     a(href='#').lineTwo__persLink.lineTwo__persLink_defColor
                         span.lineTwo__imgBasket
-                        | Корзина
+                        span.lineTwo__textBasket Корзина
                         span.counter
     .header__menu
-        ul.menu
+        ul.menu.menu_invis.menu_height
             li.menu__item
                 a(href="#").menu__link  каталог
             li.menu__item

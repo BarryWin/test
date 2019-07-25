@@ -45,7 +45,7 @@ gulp.task('build-images', done => {
     done();
 });
 
-gulp.task('build-js', done => {
+gulp.task('build-js', async done => {
     gulp.src('./src/js/**/*.{js,json}')
         .pipe(named())
         .pipe(webpack(require('./webpack.config')))

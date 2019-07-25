@@ -25,7 +25,7 @@ var swiper = new Swiper('.swiper-container', {
             spaceBetween: 7
         },
     },
-    spaceBetween: 7,
+    spaceBetween: 9,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
